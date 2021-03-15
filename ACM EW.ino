@@ -1,9 +1,26 @@
 #include <Time.h>
 #include <TimeLib.h>
 
-//Schedule
-int startTime[] = {00, 00, 00, 1, 1, 2021}; //hour, minute, second, day, month, year
-int dailyAlarm[] = {00, 00, 10};  //hour, minute, second
+
+///////////////Configuration Variables///////////////
+
+// Used to set Arduino's internal clock (Must be set to current time)
+//                hour, minute, second, day, month, year
+int startTime[] = {00,  00,     00,     1,   1,     2021};
+
+// Used to set daily irrigation alarm
+//                  hour, minute, second
+int dailyAlarm[] = {00,   00,     10};  
+
+//Temperature Settings
+const int minTemp = 65; //Minimum Temperature
+const int maxTemp = 90; //Maximum Temperature
+
+//Humidity Sensor Settings
+const int minHum = 10; //Minimum Humidity
+const int maxHum = 540; //Maximum Humidity
+
+///////////////Configuration Variables///////////////
 
 //Pins
 const int buzzerPin = 9; //buzzer to arduino pin 9
@@ -20,13 +37,9 @@ const int frequency = 1000;
 
 //Temperature Alarm Specifications
 const int tempAlarm = 1; //Alarm Tone
-const int minTemp = 65; //Minimun Temperature
-const int maxTemp = 90; //Maximun Temperature
 
 //Humidity Alarm Specifications
 const int humAlarm = 2; //Alarm Tone
-const int minHum = 10; //Minimun Humidity
-const int maxHum = 540; //Maximun Humidity
 
 int interval = 300;
 

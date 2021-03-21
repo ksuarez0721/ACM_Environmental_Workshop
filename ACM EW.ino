@@ -18,7 +18,7 @@ const int maxTemp = 90; //Maximum Temperature
 
 //Humidity Sensor Settings
 const int minHum = 130; //Minimum Humidity
-const int maxHum = 540; //Maximum Humidity
+const int maxHum = 640; //Maximum Humidity
 
 ///////////////Configuration Variables///////////////
 
